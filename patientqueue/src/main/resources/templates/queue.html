@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Очередь пациентов</title>
+	<link rel="stylesheet" th:href="@{~/../config/css/main.css}">
+	<script type="text/javascript" th:src="@{~/../config/js/subscribe.js}"></script>
+</head>
+
+<body>
+
+	<table>
+		<tr>
+			<th>Время</th>
+			<th>№</th>
+			<th>Пациент</th>
+			<th>Прием</th>
+			<th>Врач</th>
+			<th>Статус</th>
+		</tr>
+		<tr th:each="patient : ${patients}" th:classappend="c+${patient.state}">
+			<td th:text="${patient.time}"></td>
+			<td th:text="${patient.id}"></td>
+			<td th:text="${patient.fio}"></td>
+			<td th:text="${patient.label}"></td>
+			<td th:text="${patient.medNom}"></td>
+			<td th:text="${patient.status}"></td>
+		</tr>
+
+	</table>
+</body>
+</html>
