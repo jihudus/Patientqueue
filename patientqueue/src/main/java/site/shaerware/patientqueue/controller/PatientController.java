@@ -15,7 +15,7 @@ public class PatientController {
 
 	private final PatientService patientService;
 	
-	@GetMapping("/queue")
+	@GetMapping("/")
 	public String getPatients(Model model) {
 		List<Patient> patients = patientService.findAll();
 		model.addAttribute("patients", patients);

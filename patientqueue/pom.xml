@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>site.shaerware</groupId>
 	<artifactId>patientqueue</artifactId>
-	<version>1.0</version>
+	<version>1.0.1</version>
 	<name>patientqueue</name>
 	<description>Patient queue</description>
 	<properties>
